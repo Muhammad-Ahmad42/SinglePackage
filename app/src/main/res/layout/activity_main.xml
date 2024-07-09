@@ -1,0 +1,850 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:padding="10dp"
+        android:backgroundTint="#8ACF42"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/icon_bell"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:contentDescription="TODO"
+                android:src="@drawable/ic_bell"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/text_hello"
+                android:layout_width="163dp"
+                android:layout_height="33dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="Hello, Ahmad"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/icon_search_bar"
+                app:layout_constraintStart_toEndOf="@id/icon_bell"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/icon_search_bar"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="15dp"
+                android:contentDescription="TODO"
+                android:src="@drawable/ic_search_bar"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/icon_refresh"
+                app:layout_constraintStart_toEndOf="@id/text_hello"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/icon_refresh"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="10dp"
+                android:src="@drawable/icon_refresh"
+                android:contentDescription="TODO"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/icon_menu_right"
+                app:layout_constraintStart_toEndOf="@id/icon_search_bar"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/icon_menu_right"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="15dp"
+                android:contentDescription="TODO"
+                android:src="@drawable/icon_menu_right"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="#7CFFFFFF"
+        android:padding="16dp"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toTopOf="@id/bottomBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/topBar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/UserPhoneNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:text="03114802733"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tvCurrentBalance"
+                android:layout_width="54dp"
+                android:layout_height="27dp"
+                android:layout_below="@+id/UserPhoneNumber"
+                android:layout_marginBottom="16dp"
+                android:gravity="start"
+                android:text="1000"
+                android:textColor="#E6D81B60"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvCurrency"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/UserPhoneNumber"
+                android:layout_alignParentStart="true"
+
+                android:layout_marginStart="52dp"
+                android:layout_marginTop="5dp"
+
+                android:layout_toEndOf="@+id/tvCurrentBalance"
+                android:text="PKR"
+                android:textColor="#000000"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tvExpiresOn"
+                android:layout_width="167dp"
+                android:layout_height="32dp"
+                android:layout_below="@id/tvCurrency"
+                android:layout_alignParentStart="true"
+                android:layout_marginBottom="16dp"
+                android:text="Expires on 29 Dec, 2025" />
+
+            <Button
+                android:id="@+id/btnRechargeNow"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="230dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                android:backgroundTint="#D7FFFFFF"
+                android:text="Recharge"
+                android:textColor="#66B612"
+                android:textSize="13sp" />
+
+
+            <Button
+                android:id="@+id/btnPayLoan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btnRechargeNow"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="10dp"
+                android:backgroundTint="#8DF4511E"
+                android:text="Pay Loan"
+                android:textColor="#FFFFFF" />
+
+            <RelativeLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btnPayLoan"
+                android:layout_marginTop="10dp"
+                android:background="#0D393737">
+
+                <LinearLayout
+                    android:id="@+id/LayoutOfCardViews"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:padding="2dp">
+
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardViewInternet"
+                        android:layout_width="90dp"
+                        android:layout_height="140dp"
+                        android:layout_marginStart="10dp"
+                        android:elevation="10dp"
+                        app:cardCornerRadius="20dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:id="@+id/icon_wifi"
+                                android:layout_width="44dp"
+                                android:layout_height="39dp"
+                                android:layout_marginStart="18dp"
+                                android:contentDescription="TODO"
+                                android:src="@drawable/ic_wifi" />
+
+                            <TextView
+                                android:id="@+id/tvNumbersOfMBs"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/icon_wifi"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="10dp"
+                                android:text="1000"
+                                android:textColor="#E6D81B60"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/icon_wifi"
+                                android:layout_marginStart="2dp"
+                                android:layout_marginTop="12dp"
+                                android:layout_toEndOf="@id/tvNumbersOfMBs"
+                                android:text=" MBs"
+                                android:textColor="@android:color/black"
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
+
+                            <ProgressBar
+                                android:id="@+id/progressBarOfMbs"
+                                style="?android:attr/progressBarStyleHorizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/tvNumbersOfMBs"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginTop="5dp"
+                                android:progressTint="#D32867"
+                                android:max="1000"
+                                android:progress="600" />
+
+                            <TextView
+                                android:id="@+id/tvOffersActiveInternet"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/progressBarOfMbs"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginStart="2dp"
+                                android:text="10"
+                                android:textColor="@android:color/black"
+                                android:textSize="13sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/progressBarOfMbs"
+                                android:layout_marginTop="5dp"
+                                android:layout_toEndOf="@id/tvOffersActiveInternet"
+                                android:text=" offers active"
+                                android:textColor="@android:color/black"
+                                android:textSize="12sp" />
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardViewMinutes"
+                        android:layout_width="90dp"
+                        android:layout_height="140dp"
+                        android:layout_marginStart="20dp"
+                        android:elevation="10dp"
+                        app:cardCornerRadius="20dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:id="@+id/icon_calling"
+                                android:layout_width="44dp"
+                                android:layout_height="39dp"
+                                android:layout_marginStart="18dp"
+                                android:contentDescription="TODO"
+                                android:src="@drawable/ic_calling" />
+
+                            <TextView
+                                android:id="@+id/tvNumbersOfMinutes"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/icon_calling"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="10dp"
+                                android:text="1000"
+                                android:textColor="#E6D81B60"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/icon_calling"
+                                android:layout_marginStart="2dp"
+                                android:layout_marginTop="12dp"
+                                android:layout_toEndOf="@id/tvNumbersOfMinutes"
+                                android:text=" Mins"
+                                android:textColor="@android:color/black"
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/tvOffersActiveMins"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/progressBarOfMinutes"
+                                android:layout_marginTop="5dp"
+                                android:text="10"
+                                android:layout_marginStart="2dp"
+                                android:textColor="@android:color/black"
+                                android:textSize="13sp" />
+
+                            <ProgressBar
+                                android:id="@+id/progressBarOfMinutes"
+                                style="?android:attr/progressBarStyleHorizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/tvNumbersOfMinutes"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginTop="5dp"
+                                android:progressTint="#D32867"
+                                android:max="1000"
+                                android:progress="800" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/progressBarOfMinutes"
+                                android:layout_marginTop="5dp"
+                                android:layout_toEndOf="@id/tvOffersActiveMins"
+                                android:text=" offers active"
+                                android:textColor="@android:color/black"
+                                android:textSize="12sp" />
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardViewSMS"
+                        android:layout_width="90dp"
+                        android:layout_height="140dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginBottom="10dp"
+                        android:elevation="10dp"
+                        app:cardCornerRadius="20dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:id="@+id/icon_smsSending"
+                                android:layout_width="34dp"
+                                android:layout_height="36dp"
+                                android:layout_marginStart="20dp"
+                                android:layout_marginTop="10dp"
+                                android:contentDescription="TODO"
+                                android:src="@drawable/ic_sms_sending" />
+
+                            <TextView
+                                android:id="@+id/tvNumberOfSMS"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/icon_smsSending"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="10dp"
+                                android:text="2000"
+                                android:textColor="#E6D81B60"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/icon_smsSending"
+                                android:layout_marginStart="2dp"
+                                android:layout_marginTop="12dp"
+                                android:layout_toEndOf="@id/tvNumberOfSMS"
+                                android:text=" SMS"
+                                android:textColor="@android:color/black"
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
+                            <ProgressBar
+                                android:id="@+id/progressBarOfSMS"
+                                style="?android:attr/progressBarStyleHorizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/tvNumberOfSMS"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginTop="5dp"
+                                android:progressTint="#D32867"
+                                android:max="1000"
+                                android:progress="900" />
+                            <TextView
+                                android:id="@+id/tvOffersActiveSMS"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/progressBarOfSMS"
+                                android:layout_marginTop="5dp"
+                                android:text="10"
+                                android:textColor="@android:color/black"
+                                android:textSize="13sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/progressBarOfSMS"
+                                android:layout_marginTop="5dp"
+                                android:layout_toEndOf="@id/tvOffersActiveSMS"
+                                android:text=" offers active"
+                                android:textColor="@android:color/black"
+                                android:textSize="12sp" />
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/LayoutBacahtBazar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/LayoutOfCardViews"
+
+                    android:layout_marginTop="10dp">
+
+                    <ImageView
+                        android:id="@+id/ivMakeYourOwnBundle"
+                        android:layout_width="200dp"
+                        android:layout_height="50dp"
+                        android:layout_marginEnd="-15dp"
+                        android:contentDescription="make_your_own_bundle"
+                        android:src="@drawable/ic_make_your_own_bundle" />
+
+                    <ImageView
+                        android:id="@+id/ivBachatBazar"
+                        android:layout_width="200dp"
+                        android:layout_height="50dp"
+                        android:layout_marginStart="-35dp"
+                        android:layout_toEndOf="@+id/ivMakeYourOwnBundle"
+
+                        android:contentDescription="Bachat Bazar"
+                        android:src="@drawable/ic_bachat_bazar" />
+
+                    <ProgressBar
+                        android:id="@+id/progressBar"
+                        android:layout_width="158dp"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true"
+                        android:indeterminate="true"
+                        android:visibility="gone" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/ImageSlider1Layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/LayoutBacahtBazar"
+                    android:layout_marginTop="10dp"
+
+                    >
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:cardCornerRadius="20dp"
+
+                        >
+
+                        <com.denzcoskun.imageslider.ImageSlider
+                            android:id="@+id/image_slider"
+                            android:layout_width="wrap_content"
+                            android:layout_height="200dp"
+                            app:iss_auto_cycle="true"
+                            app:iss_delay="1000"
+                            app:iss_period="1000"
+                            app:iss_text_align="CENTER" />
+                    </androidx.cardview.widget.CardView>
+
+                </RelativeLayout>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardViewgridLayout1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/ImageSlider1Layout"
+                    android:layout_marginStart="3dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="3dp"
+                    android:background="@color/white"
+                    app:cardCornerRadius="20dp">
+
+                    <GridLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_margin="10dp"
+                        android:layout_marginStart="10dp"
+                        android:columnCount="4"
+                        android:rowCount="8">
+
+                        <ImageView
+                            android:id="@+id/ivRewards"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="30dp"
+                            android:contentDescription="Bachat Bazar"
+                            android:src="@drawable/ic_rewords" />
+
+                        <ImageView
+                            android:id="@+id/ivDarazHotDeals"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_marginStart="35dp"
+                            android:layout_marginTop="30dp"
+                            android:contentDescription="Todo"
+                            android:src="@drawable/ic_daraz_hot_deals" />
+
+                        <ImageView
+                            android:id="@+id/ivBriefHistory"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_marginStart="30dp"
+                            android:layout_marginTop="30dp"
+                            android:contentDescription="Todo"
+                            android:src="@drawable/ic_brief_history" />
+
+                        <ImageView
+                            android:id="@+id/ivRs10Shop"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_marginStart="25dp"
+                            android:layout_marginTop="30dp"
+                            android:layout_marginEnd="25dp"
+                            android:contentDescription="Todo"
+                            android:src="@drawable/ic_rs10_shop" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="18dp"
+                            android:layout_marginTop="5dp"
+                            android:text="Rewards"
+                            android:textColor="#81000000"
+                            android:textSize="11sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="5dp"
+                            android:text="Daraz Hot Deals"
+                            android:textColor="#81000000"
+                            android:textSize="11sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="18dp"
+                            android:layout_marginTop="5dp"
+                            android:text="Brief History"
+                            android:textColor="#81000000"
+                            android:textSize="11sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="5dp"
+                            android:text="Rs. 10 Shop"
+                            android:textColor="#81000000"
+                            android:textSize="11sp" />
+
+                        <ImageView
+                            android:id="@+id/ivGoogleMaps"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="30dp"
+                            android:contentDescription="Bachat Bazar"
+                            android:src="@drawable/ic_google_maps" />
+
+                        <ImageView
+                            android:id="@+id/ivIR"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_marginStart="35dp"
+                            android:layout_marginTop="30dp"
+                            android:contentDescription="Todo"
+                            android:src="@drawable/ic_ir" />
+
+                        <ImageView
+                            android:id="@+id/ivTaxCertificate"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="30dp"
+                            android:contentDescription="Bachat Bazar"
+                            android:src="@drawable/ic_tax_certificates" />
+
+                        <ImageView
+                            android:id="@+id/ivOnlineBooking"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_marginStart="30dp"
+                            android:layout_marginTop="30dp"
+                            android:contentDescription="Todo"
+                            android:src="@drawable/ic_online_booking" />
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="18dp"
+                            android:layout_marginTop="5dp"
+                            android:text="Google Maps"
+                            android:textColor="#81000000"
+                            android:textSize="11sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="50dp"
+                            android:layout_marginTop="5dp"
+                            android:text="IR"
+                            android:textColor="#81000000"
+                            android:textSize="11sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="5dp"
+                            android:text="Tax Certificate"
+                            android:textColor="#81000000"
+                            android:textSize="11sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="30dp"
+                            android:layout_marginTop="5dp"
+                            android:text="Booking"
+                            android:textColor="#81000000"
+                            android:textSize="10sp" />
+
+
+                        <ImageView
+                            android:id="@+id/ivSaveBalance"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="30dp"
+                            android:contentDescription="Bachat Bazar"
+                            android:src="@drawable/ic_balance_save" />
+
+                        <ImageView
+                            android:id="@+id/ivYaariLoad"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_marginStart="35dp"
+                            android:layout_marginTop="30dp"
+                            android:contentDescription="Todo"
+                            android:src="@drawable/ic_yaari_load" />
+
+                        <ImageView
+                            android:id="@+id/ivCallBlocks"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="30dp"
+                            android:contentDescription="Todo"
+                            android:src="@drawable/ic_call_blocks" />
+
+                        <ImageView
+                            android:id="@+id/ivBookYourNumber"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_marginStart="30dp"
+                            android:layout_marginTop="30dp"
+                            android:layout_marginEnd="25dp"
+                            android:contentDescription="Todo"
+                            android:src="@drawable/ic_book_your_number" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="5dp"
+                            android:text="Save Balance"
+                            android:textColor="#81000000"
+                            android:textSize="11sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="25dp"
+                            android:layout_marginTop="5dp"
+                            android:text="Yaari Load"
+                            android:textColor="#81000000"
+                            android:textSize="11sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginTop="5dp"
+                            android:text="Call Backs"
+                            android:textColor="#81000000"
+                            android:textSize="11sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="5dp"
+                            android:text="Book Your \n  Number"
+                            android:textColor="#81000000"
+                            android:textSize="11sp" />
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:id="@+id/ivMoreApps"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_marginStart="20dp"
+                                android:layout_marginTop="20dp"
+                                android:contentDescription="Bachat Bazar"
+                                android:src="@drawable/ic_more_apps" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/ivMoreApps"
+                                android:layout_marginStart="15dp"
+                                android:layout_marginTop="5dp"
+                                android:text="More Apps"
+                                android:textColor="#81000000"
+                                android:textSize="11sp" />
+                        </RelativeLayout>
+
+                    </GridLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/cardViewgridLayout1"
+                    android:layout_marginTop="8dp"
+                    app:cardElevation="10dp"
+                    >
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/recyclerViewOfHotOfferPackage"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="0dp"
+                            android:clipToPadding="false"
+                            android:orientation="horizontal"
+                            android:overScrollMode="never" />
+                        <com.google.android.material.floatingactionbutton.FloatingActionButton
+                            android:id="@+id/ic_floatingActionBtn2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone"
+                            android:contentDescription="TODO"
+                            android:layout_below="@+id/recyclerViewOfHotOfferPackage"
+                            android:layout_alignEnd="@+id/recyclerViewOfHotOfferPackage"
+                            android:src="@drawable/ic_btn_add_package"
+                            />
+                    </RelativeLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/bottomBar"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_gravity="bottom"
+        app:layout_constraintBottom_toBottomOf="parent"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+            <com.google.android.material.bottomnavigation.BottomNavigationView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/bottomNavigation"
+                app:itemBackground="@color/white"
+                app:itemTextColor="@drawable/serlector"
+                app:itemIconTint="@drawable/serlector"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:menu="@menu/menu"
+                app:labelVisibilityMode="labeled"
+                />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

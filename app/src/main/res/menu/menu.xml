@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/Homes1"
+        android:title="Home"
+        android:icon="@drawable/ic_home1" />
+    <item
+        android:id="@+id/Usages1"
+        android:title="Usage"
+        android:icon="@drawable/ic_usage1" />
+    <item
+        android:id="@+id/Bundles1"
+        android:title="Bundles"
+        android:icon="@drawable/ic_bundles1" />
+    <item
+        android:id="@+id/ZPlays1"
+        android:title="Z Play"
+        android:icon="@drawable/ic_zplay1" />
+    <item
+        android:id="@+id/Mores1"
+        android:title="More"
+        android:icon="@drawable/ic_more1" />
+</menu>

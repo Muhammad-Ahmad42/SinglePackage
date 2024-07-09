@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "473143781776",
+    "firebase_url": "https://uniproject1-925db-default-rtdb.firebaseio.com",
+    "project_id": "uniproject1-925db",
+    "storage_bucket": "uniproject1-925db.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:473143781776:android:49f48a77f243c5604fab15",
+        "android_client_info": {
+          "package_name": "com.example.singlepackage"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDQQgYn6-bLrKrYz_8ILsu_gxzIGHo5x5s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

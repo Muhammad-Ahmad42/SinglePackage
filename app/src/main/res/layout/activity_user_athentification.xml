@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UserAthentification">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView1UserAthentification"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        app:cardCornerRadius="100dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="70dp"
+        >
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_image_change11"
+            />
+    </androidx.cardview.widget.CardView>
+<TextView
+    android:id="@+id/txtUnuseable"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerHorizontal="true"
+    android:text="Keep track of your yousage MBs, Minutes,
+    \n                    Sms and balance on the go"
+   android:textColor="#B0D81B60"
+    android:layout_below="@+id/cardView1UserAthentification"
+
+    android:layout_marginTop="20dp"/>
+    <TextView
+        android:id="@+id/txtEnterMobileNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Enter Mobile Number"
+        android:textColor="#8ACF42"
+        android:layout_below="@+id/txtUnuseable"
+
+        android:layout_marginTop="20dp"/>
+
+<androidx.cardview.widget.CardView
+    android:id="@+id/cardViewUserNumberget"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:backgroundTint="#8F000000"
+    android:layout_marginStart="30dp"
+    android:layout_marginTop="10dp"
+    app:cardCornerRadius="50dp"
+    android:layout_marginEnd="30dp"
+    android:layout_below="@id/txtEnterMobileNumber"
+
+>
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_margin="0.6dp"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:cardCornerRadius="50dp"
+
+        android:padding="10dp"
+        >
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+           android:layout_gravity="end"
+            >
+
+            <EditText
+                android:id="@+id/etUserPhoneNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="80dp"
+                android:height="60dp"
+                android:background="@null"
+                android:backgroundTint="@color/white"
+                android:hint="03xxxxxxxxx"
+                android:inputType="number"
+                android:textColorHint="#8ACF42"
+
+                android:maxLength="11"
+                android:textSize="20dp"
+
+                />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/ic_moveToInformationPage"
+                android:layout_width="50dp"
+                android:layout_margin="1dp"
+                android:layout_height="50dp"
+                android:backgroundTint="#D50250"
+                app:cardCornerRadius="100dp"
+                android:layout_toEndOf="@+id/etUserPhoneNumber"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="5dp"
+
+                >
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_next"
+                    android:layout_gravity="center"
+
+                    />
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+</androidx.cardview.widget.CardView>
+    <TextView
+        android:id="@+id/txtyouWillReceiveThePin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="You will receive a pin via SMS"
+        android:textColor="#B74C4E4A"
+        android:layout_below="@+id/cardViewUserNumberget"
+
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtyouWillReceiveThePin"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="244dp"
+        android:layout_marginEnd="87dp"
+        android:layout_marginBottom="14dp"
+        android:text="By looging you will agree the term and conditions"
+        android:textColor="#B74C4E4A"
+        android:textSize="10dp" />
+
+</RelativeLayout>

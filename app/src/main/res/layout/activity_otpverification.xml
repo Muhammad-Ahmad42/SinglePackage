@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".OTPVerificationActivity">
+
+    <TextView
+        android:id="@+id/tvZong4G"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Zong 4G"
+        android:textColor="#8ACF42"
+        android:layout_marginTop="40dp"
+       android:layout_centerHorizontal="true"
+        android:textSize="30sp"
+        android:textStyle="bold"
+
+
+         />
+    <TextView
+        android:id="@+id/tvLetsGoDigital"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="LET'S GET DIGITAL"
+        android:layout_below="@id/tvZong4G"
+        android:layout_centerHorizontal="true"
+        android:textColor="#E6D81B60"/>
+<EditText
+    android:id="@+id/inputcode1"
+    android:layout_width="40dp"
+    android:layout_height="45dp"
+    android:gravity="center"
+    android:imeOptions="actionNext"
+    android:importantForAutofill="no"
+    android:inputType="number"
+    android:maxLength="1"
+    android:textColor="@color/material_dynamic_primary0"
+    android:textSize="24sp"
+    android:textStyle="bold"
+    android:layout_below="@id/tvLetsGoDigital"
+    android:layout_marginTop="60dp"
+    android:layout_marginStart="30dp"
+    tools:ignore="LabelFor" />
+    <EditText
+        android:id="@+id/inputcode2"
+        android:layout_width="40dp"
+        android:layout_height="45dp"
+        android:gravity="center"
+        android:imeOptions="actionNext"
+        android:importantForAutofill="no"
+        android:inputType="number"
+        android:maxLength="1"
+        android:textColor="@color/material_dynamic_primary0"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_below="@id/tvLetsGoDigital"
+        android:layout_marginTop="60dp"
+        android:layout_marginStart="20dp"
+        tools:ignore="LabelFor"
+        android:layout_toEndOf="@+id/inputcode1"/>
+    <EditText
+        android:id="@+id/inputcode3"
+        android:layout_width="40dp"
+        android:layout_height="45dp"
+        android:gravity="center"
+        android:imeOptions="actionNext"
+        android:importantForAutofill="no"
+        android:inputType="number"
+        android:maxLength="1"
+        android:textColor="@color/material_dynamic_primary0"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_below="@id/tvLetsGoDigital"
+        android:layout_marginTop="60dp"
+        android:layout_marginStart="20dp"
+        tools:ignore="LabelFor"
+        android:layout_toEndOf="@+id/inputcode2"/>
+    <EditText
+        android:id="@+id/inputcode4"
+        android:layout_width="40dp"
+        android:layout_height="45dp"
+        android:gravity="center"
+        android:imeOptions="actionNext"
+        android:importantForAutofill="no"
+        android:inputType="number"
+        android:maxLength="1"
+        android:textColor="@color/material_dynamic_primary0"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_below="@id/tvLetsGoDigital"
+        android:layout_marginTop="60dp"
+        android:layout_marginStart="20dp"
+        tools:ignore="LabelFor"
+        android:layout_toEndOf="@+id/inputcode3"/>
+    <EditText
+        android:id="@+id/inputcode5"
+        android:layout_width="40dp"
+        android:layout_height="45dp"
+        android:gravity="center"
+        android:imeOptions="actionNext"
+        android:importantForAutofill="no"
+        android:inputType="number"
+        android:maxLength="1"
+        android:textColor="@color/material_dynamic_primary0"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_below="@id/tvLetsGoDigital"
+        android:layout_marginTop="60dp"
+        android:layout_marginStart="20dp"
+        tools:ignore="LabelFor"
+        android:layout_toEndOf="@+id/inputcode4"/>
+
+    <EditText
+        android:id="@+id/inputcode6"
+        android:layout_width="40dp"
+        android:layout_height="45dp"
+        android:gravity="center"
+        android:imeOptions="actionNext"
+        android:importantForAutofill="no"
+        android:inputType="number"
+        android:maxLength="1"
+        android:textColor="@color/material_dynamic_primary0"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_below="@id/tvLetsGoDigital"
+        android:layout_marginTop="60dp"
+        android:layout_marginStart="20dp"
+        tools:ignore="LabelFor"
+        android:layout_toEndOf="@+id/inputcode5"/>
+
+    <TextView
+        android:id="@+id/tvEnter6DigitPin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter 6 digit pin sent to"
+       android:layout_marginStart="50dp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/inputcode1" />
+
+    <TextView
+        android:id="@+id/tvPinPhoneNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="03114802732"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/inputcode1"
+        android:layout_marginStart="30dp"
+        android:layout_toEndOf="@+id/tvEnter6DigitPin"
+        />
+
+
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:text="Login"
+        android:backgroundTint="#E6D81B60"
+       android:layout_below="@+id/tvEnter6DigitPin"  />
+
+
+    <TextView
+        android:id="@+id/tvResendPin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Resend PIN"
+        android:layout_below="@+id/btnLogin"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="40dp"
+        android:layout_marginTop="20dp"
+        android:textStyle="bold"
+        android:textColor="#8ACF42"
+        />
+</RelativeLayout>

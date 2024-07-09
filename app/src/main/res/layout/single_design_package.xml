@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:elevation="4dp"
+    app:cardCornerRadius="10dp"
+    android:padding="5dp"
+    android:layout_margin="10dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="224dp">
+
+        <ImageView
+            android:id="@+id/popularity_background"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:layout_marginEnd="3dp"
+            android:contentDescription="New"
+            android:src="@drawable/icon_of_package_popularity_new"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/popularity_text"
+            android:layout_width="53dp"
+            android:layout_height="16dp"
+            android:layout_marginBottom="14dp"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="popular"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/popularity_background"
+            app:layout_constraintEnd_toEndOf="@+id/popularity_background"
+            app:layout_constraintStart_toStartOf="@+id/popularity_background"
+            app:layout_constraintTop_toTopOf="@+id/popularity_background" />
+
+        <TextView
+            android:id="@+id/tvPackagePrice"
+            android:layout_width="33dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="55dp"
+            android:gravity="end"
+            android:text="100"
+            android:textColor="#ED7CB342"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/popularity_background" />
+
+        <TextView
+            android:id="@+id/tvCurrencyName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="23dp"
+            android:gravity="start"
+            android:text="PKR"
+            android:textColor="#ED7CB342"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/popularity_background" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="34dp"
+            android:text="incl. tax"
+            android:textColor="#CC040404"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvPackagePrice" />
+
+        <TextView
+            android:id="@+id/tvOfferTimeName"
+            android:layout_width="100dp"
+            android:layout_height="26dp"
+            android:layout_marginStart="80dp"
+            android:layout_marginTop="45dp"
+            android:layout_marginEnd="186dp"
+            android:gravity="center"
+            android:text="offer Name"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvOfferDailyOrWeekly"
+            android:layout_width="75dp"
+            android:layout_height="22dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="45dp"
+            android:layout_marginEnd="322dp"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="Daily"
+            android:textColor="#CC000000"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.208"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvOfferUsageTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="7dp"
+            android:text="2 hours"
+            android:textColor="#8F000000"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvOfferDailyOrWeekly" />
+
+        <!-- CardView to create border around the RelativeLayout -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/carViewOfBorder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="15dp"
+            android:elevation="4dp"
+            app:cardCornerRadius="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvOfferDailyOrWeekly">
+
+            <RelativeLayout
+                android:id="@+id/packageLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/tvPackageDataInNumbers"
+                    android:layout_width="45dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="80dp"
+                    android:layout_marginTop="5dp"
+                    android:gravity="end"
+                    android:text="500"
+                    android:textColor="#CC000000"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvPackagePrefix"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignEnd="@id/tvPackageDataInNumbers"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginEnd="-26dp"
+                    android:text="GBs"
+                    android:textColor="#80000000"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvPackageUseFulFor"
+                    android:layout_width="64dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignEnd="@id/tvPackagePrefix"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginEnd="-80dp"
+                    android:text="(Youtube)"
+                    android:textColor="#80000000"
+                    android:textSize="11sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvPackageDataType"
+                    android:layout_width="237dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvPackageUseFulFor"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="4dp"
+                    android:gravity="center"
+                    android:text="Internet(Facebook only)"
+                    android:textColor="#80000000"
+                    android:textSize="13sp" />
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <Button
+            android:id="@+id/btnSubscribeNow"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="70dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="15dp"
+            android:backgroundTint="#D81B60"
+            android:text="Subscribe Now"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/carViewOfBorder" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="40dp"
+            android:layout_height="33dp"
+            android:layout_marginStart="-47dp"
+            android:layout_marginBottom="10dp"
+            android:backgroundTint="#D2B1ADAD"
+            android:elevation="4dp"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintBottom_toBottomOf="@+id/btnSubscribeNow"
+            app:layout_constraintStart_toStartOf="@+id/btnSubscribeNow">
+
+            <ImageView
+                android:id="@+id/starAddsToFavourite"
+                android:layout_width="match_parent"
+                android:layout_height="29dp"
+                android:backgroundTint="@color/white"
+                android:contentDescription="Star"
+                android:src="@drawable/ic_star_to_favourite" />
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

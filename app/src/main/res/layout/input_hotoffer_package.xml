@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/etOfferNameOfHotOffer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints="no"
+            android:hint="Offer Name"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/etNumberofDataHotPackages"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints="no"
+            android:hint="Number of Data Packages"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/etNumberofOffNetMinsHotPackages"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints="no"
+            android:hint="Number of Off Net Mins"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/etNumberofZonsMinsHotPackages"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints="no"
+            android:hint="Number of Zons Mins"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/etPackagePriceHotOffers"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Package Price"
+            android:autofillHints="no"
+            android:inputType="numberDecimal" />
+
+        <EditText
+            android:id="@+id/etOfferDailyOrWeeklyHotPackages"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Offer Daily or Weekly"
+            android:autofillHints="no"
+            android:inputType="text" />
+
+
+    </LinearLayout>
+</ScrollView>

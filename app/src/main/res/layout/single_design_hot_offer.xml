@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+     >
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardViewHotOffers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#94DB49"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="8dp">
+
+        <RelativeLayout
+            android:layout_width="319dp"
+            android:layout_height="207dp"
+
+            >
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/hotOfferCard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:backgroundTint="#FB8C00"
+                app:cardCornerRadius="10dp">
+
+                <TextView
+                    android:id="@+id/hotOfferText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+
+                    android:text="HOT OFFER"
+                    android:textColor="@color/white"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    tools:ignore="SmallSp" />
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/tvOfferNameOfHotOffer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/hotOfferCard"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="-2dp"
+                android:text="Monthly Supreme Plus"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView2HotOffers"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvOfferNameOfHotOffer"
+                android:layout_marginTop="5dp"
+                app:cardCornerRadius="15dp"
+                app:cardElevation="5dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="176dp">
+
+                    <GridLayout
+                        android:id="@+id/gridLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:background="@color/white"
+                        android:columnCount="4"
+                        android:rowCount="4">
+
+                        <ImageView
+                            android:id="@+id/ivWifiHotPackages"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="15dp"
+                            android:contentDescription="Bachat Bazar"
+                            android:src="@drawable/ic_wifi" />
+
+                        <ImageView
+                            android:id="@+id/ivCallingOffNetMinsHotPackages"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_marginStart="40dp"
+                            android:layout_marginTop="15dp"
+                            android:contentDescription="Todo"
+                            android:src="@drawable/ic_calling" />
+
+                        <ImageView
+                            android:id="@+id/ivCallingZongMinsHotPackages"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_marginStart="40dp"
+                            android:layout_marginTop="15dp"
+                            android:contentDescription="Todo"
+                            android:src="@drawable/ic_calling" />
+
+                        <ImageView
+                            android:id="@+id/ivSmaHotPackages"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_marginStart="40dp"
+                            android:layout_marginTop="15dp"
+                            android:contentDescription="Todo"
+                            android:src="@drawable/ic_sms_sending" />
+
+                        <TextView
+                            android:id="@+id/tvNumberofDataHotPackages"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="5dp"
+                            android:text="30GB"
+                            android:textColor="#B3000000"
+                            android:textSize="13sp"
+                            android:textStyle="bold" />
+
+
+                        <TextView
+                            android:id="@+id/tvNumberofOffNetMinsHotPackages"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="40dp"
+                            android:layout_marginTop="5dp"
+                            android:text="600"
+                            android:textColor="#B3000000"
+                            android:textSize="13sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tvNumberofZonsMinsHotPackages"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="40dp"
+                            android:layout_marginTop="5dp"
+                            android:text="5000"
+                            android:textColor="#B3000000"
+                            android:textSize="13sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tvNumberofSmsHotPackages"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="35dp"
+                            android:layout_marginTop="5dp"
+                            android:text="5000"
+                            android:textColor="#B3000000"
+                            android:textSize="13sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="5dp"
+                            android:text="Data"
+                            android:textColor="#B3000000"
+                            android:textSize="11sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="25dp"
+                            android:layout_marginTop="5dp"
+                            android:text="Off-Net Mins"
+                            android:textColor="#B3000000"
+                            android:textSize="11sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="25dp"
+                            android:layout_marginTop="5dp"
+                            android:text="Zong Mins"
+                            android:textColor="#B3000000"
+                            android:textSize="11sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="40dp"
+                            android:layout_marginTop="5dp"
+                            android:text="SMS"
+                            android:textColor="#B3000000"
+                            android:textSize="11sp"
+                            android:textStyle="bold" />
+                    </GridLayout>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/priceCardView"
+                        android:layout_width="318dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/gridLayout"
+                        android:layout_marginTop="0dp"
+                        app:cardElevation="5dp">
+
+                        <RelativeLayout
+                            android:layout_width="317dp"
+                            android:layout_height="match_parent"
+                            android:padding="12dp">
+
+                            <TextView
+                                android:id="@+id/tvPackagePriceHotOffers"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentStart="true"
+                                android:text="5000"
+                                android:textColor="#94DB49"
+                                android:textSize="13sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/tvCurrencyName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="3dp"
+                                android:layout_toEndOf="@id/tvPackagePriceHotOffers"
+                                android:text="PKR"
+                                android:textColor="#ED7CB342"
+                                android:textSize="13sp" />
+
+                            <TextView
+                                android:id="@+id/tvRechargeRequired"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="3dp"
+                                android:layout_marginTop="2dp"
+                                android:layout_toEndOf="@id/tvCurrencyName"
+                                android:text="Recharge Required"
+                                android:textColor="#99000000"
+                                android:textSize="10sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/tvValidity"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/tvCurrencyName"
+                                android:layout_marginTop="5dp"
+                                android:text="Validity:"
+                                android:textColor="#99000000"
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/tvOfferDailyOrWeeklyHotPackages"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/tvCurrencyName"
+                                android:layout_marginStart="3dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_toEndOf="@id/tvValidity"
+                                android:text="30 Days"
+                                android:textColor="#CC000000"
+                                android:textSize="12sp" />
+
+                            <Button
+                                android:id="@+id/btnSubscribeNowHotPackages"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/tvRechargeRequired"
+                                android:layout_alignParentEnd="true"
+                                android:layout_marginTop="-1dp"
+                                android:layout_marginEnd="40dp"
+                                android:layout_marginBottom="5dp"
+                                android:backgroundTint="#D81B60"
+                                android:text="Subscribe" />
+                        </RelativeLayout>
+                    </androidx.cardview.widget.CardView>
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>
